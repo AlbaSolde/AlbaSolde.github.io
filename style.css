@@ -146,10 +146,10 @@ body{
 
 .headline{
   margin: 0 0px 12px 0;
-  font-family: "Press Start 2P", cursive;
-  font-size: 1.1rem;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 2.1rem;
   line-height: 1.45;
-  color: var(--accent);
+  color: rgb(56, 99, 255);
 }
 
 .subtitle{
@@ -343,5 +343,21 @@ body{
 .project-page .muted{
   color: var(--text);
   font-size: 0.98rem;
+}
+
+/* ===== Project image ===== */
+.project-page .project-image{
+  margin: 32px 0;              /* separa del texto */
+  display: flex;
+  justify-content: center;
+}
+
+.project-page .project-image img{
+  max-width: 100%;
+  padding: 16px;               /* ← AIRE ENTRE BORDE E IMAGEN */
+  background: #fff;            /* fondo limpio */
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 20px var(--shadow);
 }
 
