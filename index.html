@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,60 +8,53 @@
 
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Pixel font for headings -->
+  <!-- Pixel font (solo para títulos) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-  <!-- Clean font for body text (readable) -->
+  <!-- Body font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <main class="container">
-    <header class="topbar">
-      <div class="brand">AS</div>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#">
+        <span class="brand-dot" aria-hidden="true"></span>
+        Alba Soldevilla
+      </a>
+
       <nav class="nav">
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <!-- HERO WINDOW -->
-    <section class="window" aria-label="Intro">
-      <div class="window-titlebar">
-        <div class="window-dots" aria-hidden="true">
+  <main class="container">
+    <!-- HERO -->
+    <section class="card" aria-label="Intro">
+      <div class="card-titlebar">
+        <span class="title">intro.exe</span>
+        <div class="win-dots" aria-hidden="true">
           <span></span><span></span><span></span>
-        </div>
-        <div class="window-title">welcome.exe</div>
-        <div class="window-actions" aria-hidden="true">
-          <span class="win-btn"></span>
-          <span class="win-btn"></span>
         </div>
       </div>
 
-      <div class="window-body">
+      <div class="card-body">
         <div class="hero">
           <div class="hero-left">
             <p class="kicker">Hello World!</p>
-            <h1 class="headline">I’m Alba Soldevilla</h1>
-            <p class="subtitle">
-              Computer Science Master student at <b>UPC</b> (Barcelona).
-              I build clean, reliable software and I like retro UIs.
+            <h1 class="headline">This is Alba</h1>
+            <p class="subtitle"> A
+              <b>Computer Science Master student</b> at Universitat Politècnica de Catalunya, Barcelona.
             </p>
-
-            <div class="cta">
-              <a class="btn primary" href="#" target="_blank" rel="noreferrer">Resume</a>
-              <a class="btn" href="#" target="_blank" rel="noreferrer">GitHub</a>
-              <a class="btn" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-            </div>
-
-            <div class="chips" aria-label="Highlights">
-              <span class="chip">Java</span>
-              <span class="chip">Python</span>
-              <span class="chip">Web</span>
-              <span class="chip">AI/ML</span>
+            <div class="actions">
+              <a class="chip primary" href="CV_en.pdf" download="Alba_Soldevilla_CV.pdf">Resume</a>
+              <a class="chip" href="https://github.com/AlbaSolde" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="chip" href="https://www.linkedin.com/in/alba-soldevilla-gonzalez" target="_blank" rel="noreferrer">LinkedIn</a>
             </div>
           </div>
 
@@ -68,25 +62,81 @@
             <div class="avatar-frame">
               <img class="avatar" src="cv_foto.jpg" alt="Picture of Alba" />
             </div>
-
-            <div class="mini-panel">
-              <div class="mini-title">Status</div>
-              <div class="mini-row"><span>Currently</span><b>Open to interviews</b></div>
-              <div class="mini-row"><span>Location</span><b>Barcelona</b></div>
-              <div class="mini-row"><span>Focus</span><b>Software + CS</b></div>
-            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Puedes dejar tus secciones para luego -->
-    <section id="projects" class="placeholder">
-      <h2>Projects</h2>
+    <!-- PROJECTS -->
+    <section id="projects" class="card">
+      <div class="card-titlebar">
+        <span class="title">projects</span>
+        <div class="win-dots" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="projects-grid">
+          <a class="project-card" href="tfg.html">
+            <div class="project-top">
+              <h3 class="project-title">TFG — Final Degree Project</h3>
+              <span class="project-tag">Report + Code</span>
+            </div>
+            <p class="project-desc">
+              Short description of what you did and why it matters (2–3 lines max).
+            </p>
+            <div class="project-cta">
+              <span>View project</span>
+              <span class="arrow">→</span>
+            </div>
+          </a>
+
+          <a class="project-card" href="cpu.html">
+            <div class="project-top">
+              <h3 class="project-title">CPU verilog design</h3>
+              <span class="project-tag">Report + Code</span>
+            </div>
+            <p class="project-desc">
+              Designed and implemented an OoO CPU with features like a graduation list,
+              pickers, and more.
+            </p>
+            <div class="project-cta">
+              <span>View project</span>
+              <span class="arrow">→</span>
+            </div>
+          </a>
+
+          <a class="project-card" href="amm.html">
+            <div class="project-top">
+              <h3 class="project-title">Helping Batman with CPLEX and Heuristics</h3>
+              <span class="project-tag">Report + Code</span>
+            </div>
+            <p class="project-desc">
+              Coursework project for Algorithmic Methods for Mathematical Models.
+              Includes write-up + implementation.
+            </p>
+            <div class="project-cta">
+              <span>View project</span>
+              <span class="arrow">→</span>
+            </div>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="placeholder">
-      <h2>Contact</h2>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card">
+      <div class="card-titlebar">
+        <span class="title">contact</span>
+        <div class="win-dots" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="muted">You can add an email, a form, or social links.</p>
+      </div>
     </section>
   </main>
 </body>
