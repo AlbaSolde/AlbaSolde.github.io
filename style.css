@@ -130,10 +130,11 @@ body{
 /* ===== Hero ===== */
 .hero{
   display: grid;
-  grid-template-columns: 1.4fr 0.6fr;
+  grid-template-columns: 1.6fr 0.4fr; /* antes 1.4 / 0.6 */
   align-items: center;
   gap: 20px;
 }
+
 
 .kicker{
   margin: 0 0 10px;
@@ -144,7 +145,7 @@ body{
 }
 
 .headline{
-  margin: 0 0 12px;
+  margin: 0 0px 12px 0;
   font-family: "Press Start 2P", cursive;
   font-size: 1.1rem;
   line-height: 1.45;
@@ -189,7 +190,8 @@ body{
 /* ===== Avatar ===== */
 .hero-right{
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;   /* antes flex-end */
+  padding-right: 10px;       /* aire a la derecha */
 }
 
 .avatar-frame{
@@ -297,5 +299,49 @@ body{
 /* Responsive */
 @media (max-width: 900px){
   .projects-grid{ grid-template-columns: 1fr; }
+}
+
+/* ===== Project pages (TFG / CPU / AMM) ===== */
+
+.project-page .kicker{
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.3px;
+  margin-bottom: 8px;
+}
+
+.project-page .headline{
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.35;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.project-page .subtitle{
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: none;        /* quita el límite */
+  text-align: justify;    /* justificado */
+  text-justify: inter-word;
+}
+
+
+.project-page .subtitle b{
+  font-weight: 700;
+}
+
+.project-page .card-body{
+  padding: 28px;               /* más aire para lectura */
+}
+
+/* Highlights más discretos pero claros */
+.project-page .muted{
+  color: var(--text);
+  font-size: 0.98rem;
 }
 
