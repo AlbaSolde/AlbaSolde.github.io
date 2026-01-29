@@ -36,33 +36,40 @@
       </div>
 
       <div class="card-body">
-        <p class="kicker">Processor Architecture project</p>
-        <h1 class="headline">Implementation of a RISC-V CPU in SystemVerilog</h1>
+        <p class="kicker">Processor Architecture</p>
+        <h1 class="headline">Implementation of a RISC-V CPU in Verilog</h1>
 
         <p class="subtitle">
-          This Bachelor's Thesis is part of a collaborative project that studies the error probability in digital communication systems. 
-          In its first phase, the mathematical analysis and optimization of the model were carried out using various computational techniques and methods such as 
-          Newton's Method and Hermite interpolation, achieving a notable improvement in computational efficiency.
+          This project presents the design and implementation of a single-core out-of-order processor written in Verilog. 
+          The architecture supports speculative execution, register renaming, dynamic instruction scheduling, and precise exception handling through a Graduation List mechanism.
         </p>
 
         <p class="subtitle">
-          As a personal contribution, this work presents the development of an API that performs these calculations through a web interface. 
-          Implemented with Python and Docker, it provides endpoints for computing and visualizing results. 
-          The frontend, built with D3.js, enables the generation of interactive graphs and the application of various functionalities. 
-          The result is an accessible tool for the analysis of digital communication systems.
+          The processor features an instruction window with wake-up and pick logic, a store buffer with coherence guarantees, and support for multi-cycle arithmetic operations including integer and floating-point multiplication and division. 
+          To handle control flow speculation, a branch predictor based on a two-bit saturating counter was implemented, along with a robust cancellation mechanism capable of safely removing incorrectly speculated instruction ranges.
         </p>
+
+        <p class="subtitle">
+          Special attention was given to memory consistency and correctness. Load and store operations interact with the cache and store buffer while handling partial overlaps, line replacements, and cache misses without violating program order at commit time. 
+          Exceptions are resolved in-order using the Graduation List, ensuring precise state recovery even under out-of-order execution.
+        </p>
+
+        <p class="subtitle">
+          The resulting design demonstrates a fully functional out-of-order pipeline with coherence guarantees, variable-latency execution units, and correct recovery from mispredictions and exceptions, validating the feasibility of a complex speculative processor architecture within a single-core design.
+        </p>
+
 
         <div class="project-image">
           <figure>
-            <img src="pipeline-diagram.png" alt="Interactive API interface visualization" />
+            <img src="project-files/pipeline-diagram.png" alt="Interactive API interface visualization" />
             <figcaption style="font-style:italic;">Pipeline diagram.</figcaption>
           </figure>
         </div>
 
 
         <div class="actions">
-          <a class="chip primary" href="https://github.com/AlbaSolde/TFG.git" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="chip" href="TFG.pdf" download>Download PDF</a>
+          <a class="chip primary" href="https://github.com/AlbaSolde/pa-project.git" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="chip" href="project-files/pa-report.pdf" download>Download PDF</a>
           <a class="chip" href="index.html#projects">Back</a>
         </div>
 
