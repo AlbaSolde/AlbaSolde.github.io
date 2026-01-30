@@ -484,6 +484,15 @@ body{
   box-shadow: 0 6px 20px var(--shadow);
 }
 
+/* Smaller images for theory / diagrams */
+.project-image.small{
+  margin: 20px 0;
+}
+
+.project-image.small img{
+  max-width: 720px;     /* prueba 680–760 */
+}
+
 /* ===== Embedded PDF (project pages) - FIX ===== */
 .project-page .project-pdf{
   width: 100%;
@@ -591,5 +600,42 @@ body{
 }
 
 
+.project-hero-img {
+  width: 100%;
+  max-height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 14px 0 18px;
+  border: 1px solid var(--border);
+}
+
+.abstract-split {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.abstract-text {
+  flex: 2;
+}
+
+.abstract-img {
+  flex: 1;
+  max-width: 260px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .abstract-split {
+    flex-direction: column;
+  }
+
+  .abstract-img {
+    max-width: 100%;
+  }
+}
 
 
