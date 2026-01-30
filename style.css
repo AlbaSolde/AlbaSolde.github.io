@@ -164,6 +164,29 @@ body{
   line-height: 1.6;
 }
 
+.highlights{
+  margin: 12px 0 18px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  padding-left: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+}
+
+.highlights li{
+  margin-bottom: 6px;
+}
+
+
+.highlights li::before{
+  content: "›";
+  margin-right: 8px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+
 /* ===== Buttons (minimal chips) ===== */
 .actions{
   display: flex;
@@ -229,11 +252,14 @@ body{
   box-shadow: 0 10px 30px var(--shadow);
   width: fit-content;     /* se adapta al contenido */
   justify-self: end; 
+  
 }
 
 .profile-mini .avatar{
   height: auto;
   object-fit: contain;
+  max-height: 100%;
+  width: auto;
 }
 
 .mini-titlebar{
@@ -258,9 +284,13 @@ body{
 }
 
 .mini-avatar{
-  width: 260px;           /* prueba 240–280 */
+  width: 240px;        /* un poco más estrecho */
+  max-height: 320px;   /* 👈 límite vertical */
   padding: 8px;
   border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   aspect-ratio: auto;     /* IMPORTANTE */
 }
 
