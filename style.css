@@ -132,9 +132,9 @@ body{
 /* ===== Hero ===== */
 .hero{
   display: grid;
-  grid-template-columns: 1.6fr 0.4fr;
-  align-items: center;
+  align-items: start;
   gap: 22px;
+  grid-template-columns: 1.25fr 0.75fr;
 }
 
 .kicker{
@@ -169,6 +169,7 @@ body{
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .chip{
@@ -217,6 +218,55 @@ body{
   height: 100%;
   border-radius: 14px;
   object-fit: cover;
+}
+
+/* Mini “window” de perfil */
+.profile-mini{
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 30px var(--shadow);
+  width: fit-content;     /* se adapta al contenido */
+  justify-self: end; 
+}
+
+.profile-mini .avatar{
+  height: auto;
+  object-fit: contain;
+}
+
+.mini-titlebar{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 10px 12px;
+  background: var(--panel2);
+  border-bottom: 1px solid var(--border);
+}
+
+.mini-title{
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.65rem;
+  color: #444;
+}
+
+.mini-body{
+  padding: 10px;
+  display: grid;
+  gap: 12px;
+}
+
+.mini-avatar{
+  width: 260px;           /* prueba 240–280 */
+  padding: 8px;
+  border-radius: 14px;
+  aspect-ratio: auto;     /* IMPORTANTE */
+}
+
+/* Responsive */
+@media (max-width: 760px){
+  .hero{ grid-template-columns: 1fr; }
 }
 
 
