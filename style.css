@@ -482,6 +482,9 @@ body{
   border-radius: 14px;
   border: 1px solid var(--border);
   box-shadow: 0 6px 20px var(--shadow);
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* Smaller images for theory / diagrams */
@@ -491,6 +494,13 @@ body{
 
 .project-image.small img{
   max-width: 720px;     /* prueba 680–760 */
+}
+
+.project-page .project-image.small img{
+  width: 100%;
+  height: auto;
+  max-width: min(720px, 100%); /* clave: nunca más grande que el contenedor */
+  display: block;
 }
 
 /* ===== Embedded PDF (project pages) - FIX ===== */
@@ -638,4 +648,24 @@ body{
   }
 }
 
+/* 3) Móvil: menos padding para que apifinal se vea más grande */
+@media (max-width: 520px){
+  .project-page .card-body{
+    padding: 18px;             /* antes 32px */
+  }
+
+  .project-page .project-image{
+    margin: 18px 0;            /* antes 34px */
+  }
+
+  .project-page .project-image img{
+    padding: 8px;              /* antes 16px */
+    border-radius: 12px;
+  }
+
+  /* opcional: que la imagen grande aproveche todo el ancho */
+  .project-page .project-image:not(.small) img{
+    max-width: 100%;
+  }
+}
 
