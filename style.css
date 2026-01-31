@@ -669,3 +669,26 @@ body{
   }
 }
 
+/* ===== Small images: centered + caption aligned with image (desktop only) ===== */
+@media (min-width: 521px){
+
+  /* el figure se convierte en el “bloque” centrado del tamaño de la imagen */
+  .project-page .project-image.small figure{
+    margin: 0 auto;
+    width: fit-content;
+  }
+
+  /* en desktop NO queremos width:100% para las small */
+  .project-page .project-image.small img{
+    width: auto;                 /* 🔑 */
+    max-width: 720px;            /* tu límite de desktop */
+    margin: 0;                   /* evita desplazamientos raros */
+  }
+
+  /* caption alineada al borde izquierdo de la imagen */
+  .project-page .project-image.small figcaption{
+    text-align: left;
+    padding-left: 6px;           /* para que no quede “pegada” */
+  }
+}
+
